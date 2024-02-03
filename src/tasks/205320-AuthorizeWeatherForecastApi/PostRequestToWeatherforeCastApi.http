@@ -1,0 +1,14 @@
+
+###
+# Correct creds, you should get the token.
+POST https://localhost:7224/Auth HTTP/1.1
+Content-Type: application/json
+
+{
+  "userName": "admin",
+  "password": "123"
+}
+
+###
+GET https://localhost:7224/WeatherForecast HTTP/1.1
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBteXdlYnNpdGUuY29tIiwiRGVwYXJ0bWVudCI6IkhSIiwiQWRtaW4iOiJ0cnVlIiwiTWFuYWdlciI6InRydWUiLCJFbXBsb3ltZW50RGF0ZSI6IjIwMjEtMDItMDEiLCJuYmYiOjE2NjY5Mzg0NjEsImV4cCI6MTY2NjkzOTA2MX0.GcmEz_yuRxQWNuuZQVlNwx6VipdxM0XddTci8tu2WPo

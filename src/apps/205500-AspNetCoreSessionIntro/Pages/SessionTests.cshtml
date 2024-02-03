@@ -1,0 +1,64 @@
+﻿@page
+
+@model SessionTests
+
+@{
+    ViewData["Title"] = "Session Tests";
+}
+
+<div class="text-center">
+    <p>
+        <b>Name:</b> 
+            @HttpContext.Session.GetString("_Name");
+        <br/>
+        <b>Age:</b> 
+            @HttpContext.Session.GetInt32("_Age").ToString()
+        <br/>
+
+        <b>Random:</b> 
+            @HttpContext.Session.GetString("_RandomGuid")
+        <br/>
+
+@*        <b>Id: 
+            @HttpContext.Session.Id.ToString()</b>
+        <br/>*@
+    </p>
+</div>
+
+<div align="center">
+    <form method="post">
+        <table>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Click this button to add items to session" asp-page-handler="AddItemsToSession"/></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div align="center">
+    <p><a href="/SessionTests" target="_blank" >Click here to open this page in a new tab</a></p>
+</div>
+
+
+<div align="center">
+    <form method="post">
+        <table>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Click this button to Remove items to session" asp-page-handler="RemoveItemsFromSession"/></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div align="center">
+    <form method="post">
+        <table>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Click this button to Just Refresh, go back to server.." asp-page-handler="RefreshGoToServer"/></td>
+            </tr>
+        </table>
+    </form>
+</div>

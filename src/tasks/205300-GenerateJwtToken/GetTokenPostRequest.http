@@ -1,0 +1,20 @@
+
+###
+# Correct creds, you should get the token.
+POST https://localhost:7224/Auth HTTP/1.1
+Content-Type: application/json
+
+{
+  "userName": "admin",
+  "password": "123"
+}
+
+###
+# InCorrect creds
+POST https://localhost:7224/Auth HTTP/1.1
+Content-Type: application/json
+
+{
+  "userName": "admin",
+  "password": "12"
+}
